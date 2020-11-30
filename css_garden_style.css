@@ -15,8 +15,8 @@ html {
 body {
    font: 75% georgia, sans-serif;
    line-height: 1.88889;
-   color:white;
-   background: black;
+   color:black;
+   /* background: black; */
    margin: 0;
    padding: 0;
 }

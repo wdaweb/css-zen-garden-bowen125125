@@ -4,7 +4,6 @@ html,body{
   background-position: center;
   background-size: cover;
   height: 100vh;
-  font-family: 'Orbitron', sans-serif;
 }
 @import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
 
@@ -16,7 +15,7 @@ html,body{
   --white-color: #fafafa;
 }
 
-.btn {
+.btn2 {
   width: 150px;
   height: 50px; 
   border: 0;
@@ -206,3 +205,28 @@ html,body{
     opacity: 1;
   }
 }
+.title{
+  color:white;
+  font-weight: bold;
+  font-family: 'Russo One', sans-serif;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 100px;
+}
+.title h1{
+  font-size: 100px;
+}
+.footer{
+  font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.footer a{
+  color: white;
+}
+
+
+

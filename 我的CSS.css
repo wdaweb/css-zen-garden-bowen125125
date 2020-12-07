@@ -1,9 +1,5 @@
 html,body{
-  background-image: url(./images/1054256.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
+ 
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -15,6 +11,24 @@ html,body{
 }
 .title h1{
   font-family: 'Russo One', sans-serif;
+}
+.top {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 50px;
+  color:rgb(179, 179, 20);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.top a:visited {
+  color: white;
 }
 .footer{
   position: absolute;
@@ -28,7 +42,7 @@ html,body{
 }
 .download {
   border: 1px solid white;
-  width: 300px;
+  width: 500px;
   height: auto;
   color: white;
   padding: 50px;
@@ -39,17 +53,93 @@ html,body{
   left: 50%;
   transform: translate(-50%,-50%);
 }
-.road {
+
+
+.benefits {
   border: 1px solid white;
-  width: 300px;
+  width: 400px;
   height: auto;
   color: white;
   padding: 50px;
   background-color: rgba(44, 44, 44, 0.7);
+  position: absolute;
+  top: 0;
+  right: 500px;
 }
+
+
 .container-fluid{
   position: relative;
 }
+
+.contain {
+  height: 100vh;
+  background-image: url(./images/1054256.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.contain2 {
+ background-color: black;
+ height: 100vh;
+}
+.road {
+  border: 1px solid white;
+  width: 50vw;
+  height: 50vh;
+  color: white;
+  padding: 50px;
+  background-color: rgba(44, 44, 44, 0.7);
+  position: absolute;
+  top: 0;
+}
+.what {
+  border: 1px solid white;
+  width: 50vw;
+  height: 50vh;
+  color: white;
+  padding: 50px;
+  background-color: rgba(44, 44, 44, 0.7);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+}
+
+.container3 {
+ background-color: rgb(109, 109, 109);
+ height: 100vh;
+}
+.participation {
+  border: 1px solid white;
+  width: 50vw;
+  height: 50vh;
+  color: white;
+  padding: 50px;
+  background-color: rgba(44, 44, 44, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container4 {
+ background-color:white;
+ height: 100vh;
+}
+.require {
+  border: 1px solid white;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  padding: 50px;
+  background-color: rgba(44, 44, 44, 0.7);
+  position: absolute;
+  top: 0;
+  left: 500px;
+}
+
+
 
 
 

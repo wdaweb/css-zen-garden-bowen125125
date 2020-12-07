@@ -1,6 +1,10 @@
 html,body{
- 
+  position: relative;
+  
   font-family: 'Orbitron', sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .title{
@@ -9,8 +13,9 @@ html,body{
   line-height: 100vh;
   text-align: center;
 }
-.title h1{
+.title h1,.road h1,.what h1,.participation h1,.benefits h1{
   font-family: 'Russo One', sans-serif;
+  margin-bottom: 50px;
 }
 .top {
   border-radius: 50%;
@@ -20,26 +25,29 @@ html,body{
   align-items: center;
   justify-content: center;
   position: fixed;
-  right: 20px;
+  left: 20px;
   bottom: 20px;
   font-size: 50px;
   color:rgb(179, 179, 20);
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  z-index: 500;
 }
 .top a:visited {
   color: white;
 }
-.footer{
-  position: absolute;
-  bottom: 2%;
-  left: 50%;
-  transform: translate(-50%);
+#scroll {
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  position: fixed;
+  left: 50px;
+  top: 50vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 500;
 }
 
-.footer a{
-  color: white;
-}
 .download {
   border: 1px solid white;
   width: 500px;
@@ -55,17 +63,7 @@ html,body{
 }
 
 
-.benefits {
-  border: 1px solid white;
-  width: 400px;
-  height: auto;
-  color: white;
-  padding: 50px;
-  background-color: rgba(44, 44, 44, 0.7);
-  position: absolute;
-  top: 0;
-  right: 500px;
-}
+
 
 
 .container-fluid{
@@ -74,6 +72,7 @@ html,body{
 
 .contain {
   height: 100vh;
+  width: 100vw;
   background-image: url(./images/1054256.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -123,6 +122,17 @@ html,body{
   top: 0;
   left: 0;
 }
+.benefits {
+  border: 1px solid white;
+  width: 400px;
+  height: auto;
+  color: white;
+  padding: 50px;
+  background-color: rgba(44, 44, 44, 0.7);
+  position: absolute;
+  top: 0;
+  right: 500px;
+}
 .container4 {
  background-color:white;
  height: 100vh;
@@ -138,7 +148,16 @@ html,body{
   top: 0;
   left: 500px;
 }
+.footer{
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%);
+}
 
+.footer a{
+  color: white;
+}
 
 
 

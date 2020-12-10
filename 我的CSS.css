@@ -4,7 +4,7 @@ html,body{
   font-family: 'Orbitron', sans-serif;
   padding: 0;
   margin: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   
 }
 
@@ -50,22 +50,18 @@ html,body{
 }
 
 .download {
-  border: 1px solid white;
   width: 500px;
   height: auto;
   color: white;
-  padding: 50px;
+  padding: 40px;
   background-color: rgba(44, 44, 44, 0.7);
   display: inline-block;
   position: absolute;
-  top: 50%;
+  bottom: 10%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,0);
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
 }
-
-
-
-
 
 .container-fluid{
   position: relative;
@@ -86,26 +82,42 @@ html,body{
  height: 100vh;
 }
 .road {
-  border: 1px solid white;
-  width: 50vw;
-  height: 50vh;
-  color: white;
+  width: 45vw;
+  height: 50vh ;
   padding: 50px;
-  background-color: rgba(44, 44, 44, 0.7);
   position: absolute;
-  top: 0;
+  top: 50px;
+  margin-left: 50px;
+  transition: 2s;
+  border: 0;
+  outline: none;
+  background-color: yellow;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  color: black;
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 }
 .what {
   border: 1px solid white;
-  width: 50vw;
+  width: 45vw;
+  margin-right: 50px;
   height: 50vh;
-  color: white;
+  color: black;
   padding: 50px;
   background-color: rgba(44, 44, 44, 0.7);
-  position: absolute;
-  bottom: 0;
+  position: absolute!important;
   right: 0;
-  
+  bottom: 50px;
+  background-color: yellow;
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  transform: rotateX(180deg);
+  transition: 2s;
+}
+.what h1 {
+  text-align: right;
+}
+.whatclass {
+  transform: rotateX(180deg);
 }
 
 .container3 {
@@ -159,6 +171,27 @@ html,body{
 .footer a{
   color: white;
 }
+
+.align-left {
+  position: relative;
+  left: -100%;
+}
+.align-right {
+  position: relative ;
+  right: -100%;
+}
+.active {
+  position: relative;
+  left: 0;
+}
+.active2 {
+  position: relative ;
+  right: 0 ;
+}
+
+/* border動畫 */
+
+
 
 
 

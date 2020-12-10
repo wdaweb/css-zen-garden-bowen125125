@@ -22,7 +22,8 @@ html, body, h1 {
 .glitch {
   position: relative;
   color: white;
-  font-size: 8em;
+  font-size: 9em;
+  text-shadow: 5px 5px 5px rgb(194, 49, 138);
   letter-spacing: 0;
   /* Animation provies a slight random skew. Check bottom of doc
   for more information on how to random skew. */

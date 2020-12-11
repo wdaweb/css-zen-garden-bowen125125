@@ -8,7 +8,6 @@
 }
 html,body{
   position: relative;
-  
   font-family: 'Orbitron', sans-serif;
   padding: 0;
   margin: 0;
@@ -22,12 +21,43 @@ p::first-letter {
 hr{
   background-color: black
 }
-
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+.ldBar path.baseline {
+  stroke-width: 14;
+  stroke: #f1f2f3;
+  stroke-linecap: round;
+  filter:url(#custom-shadow);
+}
+/* loading bar 容器 */
+.ldBar {
+  width: 300px !important;
+  height: 300px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navbar {
+  background: rgba(65, 135, 156, 0.4)!important;
+  /* opacity: 0.8; */
+  border: 1px solid rgb(227, 135, 235);
+}
+.nav-link {
+  color: white !important;
+}
+.fab{
+  color: white;
+}
 .title{
   color:white;
   font-weight: bold;
   line-height: 100vh;
   text-align: center;
+  text-shadow: 2px 2px 2px rgb(194, 49, 138);
 }
 .title h1,.road h1,.what h1,.participation h1,.benefits h1{
   font-family: 'Russo One', sans-serif;
@@ -84,10 +114,6 @@ hr{
             inset 0 0 2rem var(--neon-border-color);
 }
 
-.container-fluid{
-  position: relative;
-}
-
 .contain {
   height: 100vh;
   width: 100vw;
@@ -112,7 +138,7 @@ hr{
   padding: 50px;
   position: absolute;
   top: 50px;
-  margin-left: 50px;
+  margin-left: 25px;
   transition: 1.5s;
   border: 5px solid white;
   outline: none;
@@ -131,13 +157,12 @@ hr{
   color: black;
   padding: 50px;
   background-color: rgba(44, 44, 44, 0.7);
-  position: absolute!important;
-  right: 0;
-  bottom: 50px;
   background-color: yellow;
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
   transform: rotateX(180deg);
   transition: 1.5s;
+  text-transform: uppercase;
+
 }
 .what h1 {
   text-align: right;
@@ -145,6 +170,7 @@ hr{
 .whatclass {
   transform: rotateX(180deg);
 }
+
 
 .container3 {
  /* background-color: rgb(109, 109, 109); */
@@ -156,7 +182,7 @@ hr{
   padding: 50px;
   position: absolute;
   top: 50px;
-  margin-left: 50px;
+  margin-left: 25px;
   transition: 1.5s;
   border: 5px solid white;
   outline: none;
@@ -166,6 +192,12 @@ hr{
   color: black;
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 }
+.leftshadow {
+  filter: drop-shadow(10px 10px 10px black);
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
 .benefits {
   border: 5px solid white;
   width: 45vw;
@@ -174,13 +206,18 @@ hr{
   color: black;
   padding: 50px;
   background-color: rgba(44, 44, 44, 0.7);
-  position: absolute!important;
-  right: 0;
-  bottom: 50px;
   background-color: yellow;
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
   transform: rotateX(180deg);
   transition: 1.5s;
+  text-transform: uppercase;
+
+}
+.rightshadow {
+  filter: drop-shadow(10px 10px 10px black);
+  position: absolute;
+  right: 0;
+  bottom: 50px;
 }
 .benefits h1 {
   text-align: right;
@@ -189,17 +226,7 @@ hr{
  /* background-color:white; */
  height: 100vh;
 }
-.require {
-  border: 1px solid white;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  padding: 50px;
-  background-color: rgba(44, 44, 44, 0.7);
-  position: absolute;
-  top: 0;
-  left: 500px;
-}
+
 .footer{
   position: absolute;
   bottom: 2%;
@@ -228,111 +255,48 @@ hr{
   right: 0 ;
 }
 
-/* loading動畫 */
-
-@keyframes grow-and-fade {
-  0% {
-    opacity: 0;
-    transform: scale(0.1) translatez(0);
-  }
-  40% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1) translatez(0);
-  }
-}
-@keyframes pulsing-fade {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.8;
-  }
-  60% {
-    opacity: 0;
-  }
-}
-.triangle {
-  animation: grow-and-fade 2000ms linear infinite;
-  height: 150px;
-  left: 0;
-  opacity: 0;
-  width: 150px;
+/* section4 */
+.my-augfiguration {
+  width: 80vw;
+  height: auto;
+  padding: 50px;
+  --aug-tr: 25px;
+  --aug-bl: 57px;
+  --aug-br: 25px;
+  --aug-br-inset2: 40%;
+  --aug-border-all: 10px;
+  --aug-border-bg: linear-gradient(to botto...);
+  --aug-inlay-all: 10px;
+  --aug-inlay-bg:black;
+  background: linear-gradient(#e731c9, #5199eb);
+  opacity: 0.8;
+  color:white;
+  font-size:20px;
   position: absolute;
-  top: 0%;
-  transform: translatez(0);
-  transform-origin: 50% 60%;
-  will-change: opacity, transform;
-}
-.triangle-wrapper {
-  height: 150px;
-  position: relative;
-  width: 150px;
-}
-.triangle-loading {
-  animation: pulsing-fade 6000ms ease infinite;
-  color: white;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 12px;
-  font-weight: 300;
+  top: 50%;
   left: 50%;
-  letter-spacing: 8px;
-  margin-left: 4px;
-  margin-top: 10px;
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  transform: translate3d(-50%, -50%, 0);
-  text-transform: uppercase;
+  transform: translate(-50%,-50%);
+  
 }
-.triangle-svg {
-  margin-top: -20px;
-  opacity: 0.5;
-  overflow: visible;
+.my-augfiguration::after{
+  content: '';
+  width: 450px;
+  height: 150px;
+  border: 5px solid white;
+  background-color:white;
 }
-.triangle-polygon {
-  stroke-width: 5px;
+.my-augfiguration h1 {
+  font-family: 'Russo One', sans-serif;
+  margin-bottom: 40px;
+  font-size: 50px;
 }
-.triangle-1 {
-  animation-delay: 0ms;
+.my-augfiguration p::first-letter {
+  font-size: 30px;
+  color: yellow;
 }
-.triangle-1 .triangle-polygon {
-  stroke: hotpink;
+.shadow {
+ box-shadow: 10px 10px 10px black;
 }
-.triangle-2 {
-  animation-delay: 400ms;
-}
-.triangle-2 .triangle-polygon {
-  stroke: aqua;
-}
-.triangle-3 {
-  animation-delay: 800ms;
-}
-.triangle-3 .triangle-polygon {
-  stroke: cornflowerblue;
-}
-.triangle-4 {
-  animation-delay: 1200ms;
-}
-.triangle-4 .triangle-polygon {
-  stroke: yellow;
-}
-.triangle-5 {
-  animation-delay: 1600ms;
-}
-.triangle-5 .triangle-polygon {
-  stroke: white;
-}
-
-
 
 
 
